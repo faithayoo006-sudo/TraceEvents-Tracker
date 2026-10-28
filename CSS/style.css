@@ -1,0 +1,139 @@
+/* House style — main #2C3E50 ground #ECF0F1 ink #333333 accent #E74C3C
+headings: "Merriweather", serif body: "Open Sans", sans-serif */
+
+* {
+  box-sizing: border-box;
+}
+
+img, input, select, textarea {
+  max-width: 100%;
+}
+
+/* --- Lab 2 Grid Layout with Named Areas --- */
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #ECF0F1; /* Ground color */
+  color: #333333;            /* Ink color */
+  
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18rem;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+  min-height: 100vh;
+}
+
+/* --- Header Styling --- */
+header {
+  grid-area: header;
+  background-color: #2C3E50; /* Main color */
+  color: #FFFFFF;
+  padding: 1.5rem;
+}
+
+header h1 {
+  font-family: "Merriweather", serif;
+  margin: 0 0 0.5rem 0;
+}
+
+/* --- Flexbox Navigation --- */
+nav {
+  grid-area: nav;
+  background-color: #E74C3C; /* Accent color */
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0.75rem 1.5rem;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- Main Content Area --- */
+main {
+  grid-area: main;
+  padding: 1.5rem;
+  background-color: #ECF0F1;
+}
+
+/* --- Aside / Notices Area --- */
+aside {
+  grid-area: aside;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border-left: 1px solid #BDC3C7;
+}
+
+/* --- Footer --- */
+footer {
+  grid-area: footer;
+  background-color: #2C3E50; /* Main color */
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* --- Wrapping Cards --- */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 240px;
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- Table Scroll Wrapper --- */
+.table-scroll {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #BDC3C7;
+  text-align: left;
+}
+
+/* --- Media Query for Mobile (700px and under) --- */
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+  }
+  
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
