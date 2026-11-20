@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trace Events Tracker - About</title>
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="css/style.css">
+<!-- Embedded-->
+   <script>
+    console.log("Embedded JS");
+   </script>
+   
+  <!-- Week 8: the script, with defer -->
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header>
@@ -13,12 +20,16 @@
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="events.html">Events</a>
-    <a href="ticket.html">My Tickets</a>
-    <a href="budget.html">Budget</a>
-    <a href="contact.html">Contact</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="my-tickets.html">My Tickets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="organizer.html">Organizer</a></li>
+      <li><a href="management.html">Management</a></li>
+    <a href="login.html" id="authLink">Log in</a>  
+    </ul>
   </nav>
 
   <main>
@@ -28,7 +39,7 @@
     <h3>Core Objectives</h3>
     <p>Provide secure user authentication for students, organizers, and admins; maintain automated attendance records; and offer transparent financial budget estimations for campus events.
         To identify the challenges faced by students and organizers in managing events, and to provide a user-friendly platform that simplifies event registration, ticket tracking, and budget management.</p>
-    </p>Our system is designed to enhance the overall event experience for students and organizers alike, ensuring that events are well-organized, accessible, and enjoyable for all participants.</p>
+    <p>Our system is designed to enhance the overall event experience for students and organizers alike, ensuring that events are well-organized, accessible, and enjoyable for all participants.</p>
   </main>
 
   <aside>
